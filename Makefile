@@ -1,3 +1,5 @@
+.PHONY: all install
+
 all:
 	@echo "Empty build"
 
