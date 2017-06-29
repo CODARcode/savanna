@@ -1,7 +1,7 @@
 # Savana 0.5 Release (June 2017)
 
 Overview
---------
+=========
 
 At its core, the Savanna runtime is a combination of two distinct in situ/online workflow management technologies:  Swift/T and ADIOS.  By combining them in a new larger infrastructure, Savanna offers a more comprehensive environment for constructing online data analysis and reduction frameworks that captures both Swift/T’s asynchronous workflow construction capabilities and ADIOS’s staged communication abilities for long-running online analytics.
 
@@ -31,7 +31,7 @@ transfers, and other technical minutia that tend to interfere with the
 deployment of online techniques.
 
 Installation
-------------
+============
 
 The simplest form of installation is through spack.  ([https://github.com/LLNL/spack]())  Savanna is a package that depends on a specific set of configured installations of Swift/T and ADIOS, which are also available within spack.  Spack will automatically download and build all of the dependencies, so installation is as simple as the following:
 `spack install savanna`
@@ -39,7 +39,7 @@ The simplest form of installation is through spack.  ([https://github.com/LLNL/s
 A fork of the official spack repository is maintained at [https://github.com/CODARcode/spack]().  During the release cycle, the most recent versions of spack packages for ADIOS, Swift/T, Savanna, and Cheetah (a related CODAR product) can be found there, until those packages have been accepted by the spack maintainers.
 
 What’s in Savanna?
-------------------
+===================
 
 The Savanna installation includes the dependencies for correct
 configuration and build of Swift/T and ADIOS, as well as some example
@@ -52,7 +52,7 @@ self-guided exploration of the interfaces.  More details on the heat
 transfer mini-app are included below.
 
 Heat Transfer Example
----------------------
+=====================
 
 The heat transfer example has been prepared to demonstrate CODAR Savana capability in which users can compose and execute multiple applications in an orchestrated environment. 
 The code consists of two components; "simulator" and "stager". "Simulator" performs numeric calculations of heat transfers and outputs data during the calculation to "stager". "Stager" takes outputs from "simulator" and performs extra steps, such as saving data as files, compressions, transforms, etc. Executions are orchestrated and managed by CoDAR's key infrastructure software, Swift/T and Adios.
@@ -123,9 +123,9 @@ Usage: stage_write/stage_write input output rmethod "params" wmethod "params" <d
 Compression
 ------------
 
-To enable compression through Adios, we need to provide additional options for "stager". The options are the list of variables to compress and the Adios' compression definition. For an example, the following options can used in "workflow.swift". An example is as follows:
+To enable compression through Adios, we need to provide additional options for "stager". The options are the list of variables to compress and the Adios' compression definition. For an example, the following options can used in "workflow.swift" (line 17). 
 ```
-arguments2 = split("heat.bp staged.bp FLEXPATH \"\" MPI \"\" \"T,dt\" \"ZFP:accuracy=0.001\"", " ");
+arguments2 = split("heat.bp staged.bp FLEXPATH \"\" MPI \"\" \"T,dt\" \"SZ:accuracy=0.001\"", " ");
 ```
-"stager" will compress "T" and "dT" variables with ZFP method maintaining errors lower than 0.001 (This is ZFP's specific parameters. More details can be found in Adios's manual). 
+"stager" will compress "T" and "dT" variables with SZ method maintaining absolute errors lower than 0.001 (This is SZ's specific parameters. More details can be found in Adios's manual). 
 
