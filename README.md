@@ -66,39 +66,40 @@ By modifying workflow.swift, users can change the number of processes, arguments
 @par=N (program1, argument1): use N processes to launch program1 with argument1
 Line 7: arguments1 = split("heat  4 3  40 50  6 500", " ");
 Parameters for heat transfer execution. Details are as follows:
-`$ ./heat_transfer_adios2`
- `Usage: heat_transfer  output  N  M   nx  ny   steps iterations
- output: name of output file`
- `N:      number of processes in X dimension`
- `M:      number of processes in Y dimension`
- `nx:     local array size in X dimension per processor`
- `ny:     local array size in Y dimension per processor`
- `steps:  the total number of steps to output`
- `iterations: one step consist of this many iterations`
-` ensenble_float: A parameter we can vary to vary the results`
-`Line 17: arguments2 = split("heat.bp staged.bp FLEXPATH \"\" MPI\"\"", " ");`
+
+    `$ ./heat_transfer_adios2`
+     `Usage: heat_transfer  output  N  M   nx  ny   steps iterations
+     output: name of output file`
+     `N:      number of processes in X dimension`
+     `M:      number of processes in Y dimension`
+     `nx:     local array size in X dimension per processor`
+     `ny:     local array size in Y dimension per processor`
+     `steps:  the total number of steps to output`
+     `iterations: one step consist of this many iterations`
+    ` ensenble_float: A parameter we can vary to vary the results`
+    `Line 17: arguments2 = split("heat.bp staged.bp FLEXPATH \"\" MPI\"\"", " ");`
 
 Parameters for stager.
 
-`$ stage_write/stage_write `
-`Usage: stage_write/stage_write input output rmethod "params" wmethod "params" <decomposition>`
- `   input   Input stream path`
- `   output  Output file path`
- `   rmethod ADIOS method to read with`
- `           Supported read methods: BP, DATASPACES, DIMES, FLEXPATH`
-`    params  Read method parameters (in quotes; comma-separated list)`
- `   wmethod ADIOS method to write with`
- `   params  Write method parameters (in quotes; comma-separated list)
-    names   List of variables to apply transforms(compression) (in quotes; comma-separated list)`
- `   params  Transform parameters (in quotes)`
-  `  <decomposition>    list of numbers e.g. 32 8 4`
-   `         Decomposition values in each dimension of an array`
-  `          The product of these number must be less then the number`
-`            of processes. Processes whose rank is higher than the`
-`            product, will not write anything.`
- `              Arrays with less dimensions than the number of values,`
-`            will be decomposed with using the appropriate number of`
-`            values.`
+    `$ stage_write/stage_write `
+    `Usage: stage_write/stage_write input output rmethod "params" wmethod "params" <decomposition>`
+     `   input   Input stream path`
+     `   output  Output file path`
+     `   rmethod ADIOS method to read with`
+     `           Supported read methods: BP, DATASPACES, DIMES, FLEXPATH`
+    `    params  Read method parameters (in quotes; comma-separated list)`
+     `   wmethod ADIOS method to write with`
+     `   params  Write method parameters (in quotes; comma-separated list)
+        names   List of variables to apply transforms(compression) (in quotes; comma-separated list)`
+     `   params  Transform parameters (in quotes)`
+      `  <decomposition>    list of numbers e.g. 32 8 4`
+       `         Decomposition values in each dimension of an array`
+      `          The product of these number must be less then the number`
+    `            of processes. Processes whose rank is higher than the`
+    `            product, will not write anything.`
+     `              Arrays with less dimensions than the number of values,`
+    `            will be decomposed with using the appropriate number of`
+    `            values.`
 
 
 
