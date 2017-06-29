@@ -57,6 +57,8 @@ Heat Transfer Example
 The heat transfer example has been prepared to demonstrate CODAR Savana capability in which users can compose and execute multiple applications in an orchestrated environment. 
 The code consists of two components; "simulator" and "stager". "Simulator" performs numeric calculations of heat transfers and outputs data during the calculation to "stager". "Stager" takes outputs from "simulator" and performs extra steps, such as saving data as files, compressions, transforms, etc. Executions are orchestrated and managed by CoDAR's key infrastructure software, Swift/T and Adios.
 
+![Heat Transfer Example](fig/heat.png?raw=true "Heat Transfer Example")
+
 The heat transfer example is publicly available in CoDAR's git repository: https://github.com/CODARcode/Example-Heat_Transfer
 
 Build
