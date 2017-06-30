@@ -54,6 +54,11 @@ included in Savanna as submodules, so you will need to use "git clone
 tarball of those sources is available.  More details on the heat
 transfer mini-app are included below.
 
+Additionally, the Cheetah testing framework mentioned in the
+introduction is available as a working example of Savanna.  Cheetah
+v0.1 corresponds to the Savanna v0.5 release, and it is available at
+[https://github.com/CODARcode/cheetah/releases/tag/v0.1](). 
+
 Heat Transfer Example
 =====================
 
