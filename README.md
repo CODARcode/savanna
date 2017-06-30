@@ -48,7 +48,10 @@ introduce a self-contained mini-app, as well as a 3rd party process
 (already built in the ADIOS release) that will allow you to transfer
 data and compress or reduce the data in a variety of ways.  These are
 intended to be simple enough examples that users can use them for
-self-guided exploration of the interfaces.  More details on the heat
+self-guided exploration of the interfaces.  These examples are
+included in Savanna as submodules, so you will need to use "git clone
+--recursive", or you can go to the release package, where a 
+tarball of those sources is available.  More details on the heat
 transfer mini-app are included below.
 
 Heat Transfer Example
@@ -59,12 +62,20 @@ The code consists of two components; "simulator" and "stager". "Simulator" perfo
 
 ![Heat Transfer Example](fig/heat.png)
 
-The heat transfer example is publicly available in CoDAR's git repository: https://github.com/CODARcode/Example-Heat_Transfer
+The heat transfer example is publicly available in CoDAR's git
+repository: [https://github.com/CODARcode/Example-Heat_Transfer](), or as
+a tarball associated with the Savanna v0.5 release [https://github.com/CODARcode/savanna/releases/tag/v0.5]()
 
 Build
 -----
 
-Heat transfer example depends on multiple key software, Swift, EVPath, and Adios. The details of building instructions are included in "README.adoc" in the release. 
+Heat transfer example depends on multiple key software components, all
+of which will be automatically built if using the spack installation
+mechanism. More details of building by hand are included in
+"README.adoc" in the Heat_Transfer directory.  Note that ADIOS
+supports two different online/in situ connection technologies (which
+are called Staging transports in ADIOS):  DataSpaces and FlexPath.
+Details for both are in the example documentation.
 
 Run
 ---
