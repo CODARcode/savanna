@@ -38,6 +38,15 @@ The simplest form of installation is through spack.  (<https://github.com/LLNL/s
 
 A fork of the official spack repository is maintained at <https://github.com/CODARcode/spack>.  During the release cycle, the most recent versions of spack packages for ADIOS, Swift/T, Savanna, and Cheetah (a related CODAR product) can be found there, until those packages have been accepted by the spack maintainers.
 
+The steps listed below must be followed to install spack and Savanna.
+1. Download spack from the CODAR repository (you may also install spack from the official repository; this example uses the spack repository at CODARcode) `git clone --branch codar https://github.com/CODARcode/spack.git`
+1. Setup spack:
+    1. Integrate spack with the shell `. ./share/spack/setup-env.sh`
+    1. Create the ~/.spack/packages.yaml file which contains paths to common Linux utilities for spack to use. Without this, spack will unncessarily download tools found commonly in Linux installations. The spack-setup-local.py script has been provided to do this automatically through `python spack-setup-local.py`. If for some reason this fails, manually create the file. See the example-packages.yaml file provided in the CODARcode/spack repository. For more information, consult the official spack documentation.
+    1. Using spack on cray supercomputers such as Titan requires creating the ~/.spack/cray/compilers.yaml file. Consult the official Spack documentation for more information.
+1. Install Savanna using `spack install savanna`
+
+
 What’s in Savanna?
 ===================
 
