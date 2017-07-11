@@ -33,10 +33,10 @@ deployment of online techniques.
 Installation
 ============
 
-The simplest form of installation is through spack.  ([https://github.com/LLNL/spack]())  Savanna is a package that depends on a specific set of configured installations of Swift/T and ADIOS, which are also available within spack.  Spack will automatically download and build all of the dependencies, so installation is as simple as the following:
+The simplest form of installation is through spack.  (<https://github.com/LLNL/spack>)  Savanna is a package that depends on a specific set of configured installations of Swift/T and ADIOS, which are also available within spack.  Spack will automatically download and build all of the dependencies, so installation is as simple as the following:
 `spack install savanna`
 
-A fork of the official spack repository is maintained at [https://github.com/CODARcode/spack]().  During the release cycle, the most recent versions of spack packages for ADIOS, Swift/T, Savanna, and Cheetah (a related CODAR product) can be found there, until those packages have been accepted by the spack maintainers.
+A fork of the official spack repository is maintained at https://github.com/CODARcode/spack.  During the release cycle, the most recent versions of spack packages for ADIOS, Swift/T, Savanna, and Cheetah (a related CODAR product) can be found there, until those packages have been accepted by the spack maintainers.
 
 What’s in Savanna?
 ===================
@@ -57,7 +57,7 @@ transfer mini-app are included below.
 Additionally, the Cheetah testing framework mentioned in the
 introduction is available as a working example of Savanna.  Cheetah
 v0.1 corresponds to the Savanna v0.5 release, and it is available at
-[https://github.com/CODARcode/cheetah/releases/tag/v0.1](). 
+https://github.com/CODARcode/cheetah/releases/tag/v0.1. 
 
 Heat Transfer Example
 =====================
@@ -68,8 +68,8 @@ The code consists of two components; "simulator" and "stager". "Simulator" perfo
 ![Heat Transfer Example](fig/heat.png)
 
 The heat transfer example is publicly available in CoDAR's git
-repository: [https://github.com/CODARcode/Example-Heat_Transfer](), or as
-a tarball associated with the Savanna v0.5 release [https://github.com/CODARcode/savanna/releases/tag/v0.5]()
+repository: https://github.com/CODARcode/Example-Heat_Transfer, or as
+a tarball associated with the Savanna v0.5 release https://github.com/CODARcode/savanna/releases/tag/v0.5
 
 Build
 -----
