@@ -1,3 +1,4 @@
 [submodule "Heat_Transfer"]
 	path = Heat_Transfer
 	url = https://github.com/CODARcode/Example-Heat_Transfer.git
+	branch = master
