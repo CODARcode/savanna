@@ -3,10 +3,10 @@
 The Savanna runtime provides the infrastructure to orchestrate and run complex science workflows consisting of multiple components (simulation, analysis codes, coupling frameworks, profiling libraries etc.).
 
 Savanna is designed to work with the Cheetah Experiment Harness that is used to run parameter sweep experiments for exascale applications.
-For the current release 1.0 of Savanna, Savanna is integrated into the source code of [Cheetah](https://github.com/CODARcode/cheetah).
-Users are not required to launch Savanna explicitly. The workflow engine in Cheetah, along with the specification format for defining parameter sweeps, implement the full functionality of Savanna.
+For the current release 1.0 of Savanna, it is integrated into the source code of [Cheetah](https://github.com/CODARcode/cheetah).
+Users are not required to launch Savanna explicitly. The workflow engine in Cheetah, along with the workflow specification for defining parameter sweeps, implement the full functionality of Savanna.
 
-
+Going forward, as we add more features to Savanna, it will be created as a stand-alone library that can be downloaded and built independently of Cheetah.
 
 ## Installation
 
